@@ -770,7 +770,7 @@ git clone git://example.com:git/project.git
 
 
 
-**Note one `ssh` vs `https`**
+**Note on `ssh` vs `https`**
 
 When using the `https` protocol, we are prompted with a _login_ prompt whenever
 we want to interact with the server, of the kind
