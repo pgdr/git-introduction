@@ -234,7 +234,7 @@ lines.
 
 # The empty repository
 
-_(NB:  You probably want to create a new folder to experiment in with `mkdir git` and `cd git` prior to `git init`.)_
+_(NB:  You probably want to create a new folder to experiment in with `mkdir path` and `cd path` prior to `git init`.)_
 
 
 We now understand the fundamentals behind revisions of files, so we are ready to
