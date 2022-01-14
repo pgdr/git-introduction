@@ -1,8 +1,10 @@
-# Git introduction ½ day course
+# Crash course in Git
 
-Welcome to the Git Introduction ½ day course for Equinor ASA.  This
-entire course is available under the _**Creative Commons** Attribution Share
-Alike 4.0 International license_ (cc-by-4.0).
+Welcome to the Git ½ day crash course for the University of Bergen.
+
+This entire course is available under the _**Creative Commons**
+Attribution Share Alike 4.0 International license_ (cc-by-4.0),
+created by and for Pål Grønås Drange (`Pal.Drange@uib.no`).
 
 >**You are free to:**
 >
@@ -933,4 +935,4 @@ pull`.
 ---
 
 
-Copyright 2020 Equinor ASA, (cc-by-4.0)
+Copyright 2020---2022 Pål Grønås Drange, (cc-by-4.0)
