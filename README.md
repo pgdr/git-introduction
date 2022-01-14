@@ -207,6 +207,14 @@ meaning now, i.e. what is the difference between `a.txt` and `b.txt`.
 > lean, long dusty, dreary
 ```
 
+**Lines are first-class citizens**
+
+Note that `diff`, `patch`, and therefore also `git` are primarily _line
+oriented_, meaning that changes are on a line-by-line basis.  This means
+that there are some drawbacks with regards to programming languages (and
+other content like markup and natural text) that naturally span several
+lines.
+
 ## Exercises
 
 1. Create (`touch`) a new text file.
