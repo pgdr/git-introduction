@@ -528,7 +528,7 @@ The `branch` command adds a _new branch_ called `my_first_branch`, and if we run
 `my_first_branch`.  The next step is to _go to_ the new branch:
 
 ```bash
-git checkout my_first_branch
+git switch my_first_branch
 ```
 
 This takes us to the new branch that branched our from _`HEAD`_ on `master`, and
@@ -542,13 +542,16 @@ that `my_first_branch` has moved beyond `master`, by running `git log`:
 * 1fe91d0 (master) Initial commit
 ```
 
+(We note that `git checkout` has been "replaced" with `git switch` and
+`git restore`, and that `git switch -c new_branch` has become the
+recommended alternative to `git checkout -b new_branch`.)
 
 **Merging a branch into `master`**
 
 When we work with a branch, we usually intend to _merge_ the branch with the
 master branch (but not always).
 
-Run `git branch` to ensure that we are on `master`.  Run `git checkout -b
+Run `git branch` to ensure that we are on `master`.  Run `git switch -c
 new_branch` and make changes to `a.txt`.  Stage and commit the changes, and
 check out `master`.
 
@@ -611,7 +614,7 @@ keep both changes, and no data/change is lost.
 
 But what if we have two files that change _the same line_‽
 
-Let us check out yet another branch, `git checkout -b future-confl`.  Edit any
+Let us check out yet another branch, `git switch -c future-confl`.  Edit any
 line in `a.txt` and commit.  Go back to master and edit _the same line in
 `a.txt` but in a different way_.  Now **let's merge**!
 
