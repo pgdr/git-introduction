@@ -145,6 +145,34 @@ git config --global core.excludesfile %USERPROFILE%\.gitignore
 
 You can also create local `.gitignore` files by creating a file with that name in one of your `git`-repositories.
 
+## Aliases
+There is a lot of git commands and many of them can feel quite long if you type them in very often. Therefore, `git` allows you to alias commands, which means that it creates a shortcut for it.
+
+To be able to do that, you need to open your `.gitconfig` file by opening it with the text editor of your trust.
+``` bash
+nano ~/.gitconfig
+```
+
+In there, one needs to create an `[alias]` section followed by any number of aliases. This can be added to the end of the file. The format of them is like a variable assignment in a programming language. The left side is the new command and the right side the old command ([source](https://stackoverflow.com/questions/2553786/how-do-i-alias-commands-in-git/28824653#28824653)).
+
+An example can look like that:
+``` bash
+[alias]
+blame = praise
+
+l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+ld = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+
+a = add
+ap = add -p
+cm = commit -m
+d = diff
+s = status
+```
+
+
 # Warming up
 
 Open an empty pure text file.
