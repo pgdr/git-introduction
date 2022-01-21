@@ -118,6 +118,33 @@ When programming, there are a lot of files which are temporarily created like co
 
 To solve that problem, there is a way to create a global ignore file which contains a list of filename (including wildcards) which should be ignored by `git`.
 
+To create a global `.gitignore` file, use the following command:
+
+``` bash
+nano ~/.gitignore
+```
+You may want to use a different editor if you like. Inside that file, you can add file- or foldernames you would like to ignore forever. Every line in a file is one entry to ignore. If you use a start, you create a wildcard, which can be any number and combination of symbols.
+
+An example .gitignore file for `Java` can look like this:
+``` bash
+*.class
+*.jar
+```
+
+That file tells `git` to ignore every file with the file ending `.class` or `.jar`. There are good websites in the Internet creating `.gitignore`-files automatically, depending on the programming languages and IDEs you are using. One example is [this website](https://www.toptal.com/developers/gitignore).
+
+After creating the file, you need to tell `git ignore` where the file is saved by sending the following command:
+``` bash
+git config --global core.excludesfile ~/.gitignore
+```
+
+Due to the weirdness of Microsoft products, this command is different on Windows ([source](https://sebastiandedeyne.com/setting-up-a-global-gitignore-file/)):
+``` bash
+git config --global core.excludesfile %USERPROFILE%\.gitignore
+```
+
+You can also create local `.gitignore` files by creating a file with that name in one of your `git`-repositories.
+
 # Warming up
 
 Open an empty pure text file.
