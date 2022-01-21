@@ -78,10 +78,10 @@ The topics for a four hour course is:
 
 
 The least interesting topic for a _fundamentals course_ is the topic of
-_Remotes_, so when squeezed into _three hours_, we cap the that section.
+_Remotes_, so when squeezed into _three hours_, we cap that section.
 
 
-The topics for a three hour course is:
+The topics for a three hour course are:
 
 1. First commits and browsing
 2. Linear use and undoing
