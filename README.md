@@ -158,7 +158,7 @@ In there, one needs to create an `[alias]` section followed by any number of ali
 An example can look like that:
 ``` bash
 [alias]
-blame = praise
+praise = blame
 
 l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
 ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
