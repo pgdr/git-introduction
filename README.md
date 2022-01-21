@@ -91,6 +91,7 @@ The topics for a three hour course are:
 ## Table of contents
 
 
+1. [First time setup and configuration](#first-time-setup-and-configuration)
 1. [Warming up](#warming-up)
 1. [The empty repository](#the-empty-repository)
 1. [Your first commit](#your-first-commit)
@@ -100,6 +101,22 @@ The topics for a three hour course are:
 1. [Branches in git](#branches-in-git)
 1. [Remotes](#remotes)
 1. [Git commands](#git-commands)
+
+# First time setup and configuration
+If you have already installed `git`, you may want to skip that section.
+
+If this is the first time you are using `git`, you may run into problems due to a lack of configuration. The first time you are using `git`, you should set your name and your email-adress, which will later get used to tag commits you are contributing in different projects.
+
+There is a tool called `git` config which lets you set different parameters of your local configuration. If you wish to set your name and your email-adress (you should), you can use the `git config` in the following way:
+
+``` bash
+git config --global user.name "Ola Nordmann"
+git config --global user.email oldnordmann@example.com
+```
+## Creating a .gitignore file
+When programming, there are a lot of files which are temporarily created like compiled versions of files, files created by IDEs or big data files which you may not want to save into your version control system.
+
+To solve that problem, there is a way to create a global ignore file which contains a list of filename (including wildcards) which should be ignored by `git`.
 
 # Warming up
 
