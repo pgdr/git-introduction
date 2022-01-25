@@ -853,27 +853,37 @@ pull`.
 # First time setup and configuration
 If you have already installed `git`, you may want to skip that section.
 
-If this is the first time you are using `git`, you may run into problems due to a lack of configuration. The first time you are using `git`, you should set your name and your email-adress, which will later get used to tag commits you are contributing in different projects.
+If this is the first time you are using `git`, you may run into problems
+due to a lack of configuration.  The first time you are using `git`, you
+should set your name and your email address, which will later get used
+to tag commits you are contributing in different projects.
 
-There is a tool called `git` config which lets you set different parameters of your local configuration. If you wish to set your name and your email-adress (you should), you can use the `git config` in the following way:
+There is a tool called `git config` which lets you set different
+parameters of your local configuration.  If you wish to set your name
+and your email address (you should), you can use the `git config` in the
+following way:
 
-``` bash
+```bash
 git config --global user.name "Ola Nordmann"
 git config --global user.email oldnordmann@example.com
 ```
-## Creating a .gitignore file
+## Creating a `.gitignore` file
 When programming, there are a lot of files which are temporarily created like compiled versions of files, files created by IDEs or big data files which you may not want to save into your version control system.
 
 To solve that problem, there is a way to create a global ignore file which contains a list of filename (including wildcards) which should be ignored by `git`.
 
 To create a global `.gitignore` file, use the following command:
 
-``` bash
+```bash
 nano ~/.gitignore
 ```
-You may want to use a different editor if you like. Inside that file, you can add file- or foldernames you would like to ignore forever. Every line in a file is one entry to ignore. If you use a start, you create a wildcard, which can be any number and combination of symbols.
 
-An example .gitignore file for `Java` can look like this:
+You may want to use a different editor if you like.  Inside that file,
+you can add file or folder names you would like to ignore forever.
+Every line in a file is one entry to ignore.  If you use a start, you
+create a wildcard, which can be any number and combination of symbols.
+
+An example `.gitignore` file for `Java` can look like this:
 ``` bash
 *.class
 *.jar
@@ -886,7 +896,7 @@ After creating the file, you need to tell `git ignore` where the file is saved b
 git config --global core.excludesfile ~/.gitignore
 ```
 
-Due to the weirdness of Microsoft products, this command is different on Windows ([source](https://sebastiandedeyne.com/setting-up-a-global-gitignore-file/)):
+For Windows, the path is `%USERPROFILE%` rather than `~`:
 ``` bash
 git config --global core.excludesfile %USERPROFILE%\.gitignore
 ```
