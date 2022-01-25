@@ -254,6 +254,8 @@ Initialized empty Git repository in /Your/username/path/.git/
 
 **Congratulations**, you have started using `git`!
 
+If you get an error message about not having installed `git`, it is probably your first time using that tool. If that is the case, have a look for the section [First time setup and configuration](#first-time-setup-and-configuration) on how to configurate your first `git` setup.
+
 To see what we have in our folder, we run
 
 ```bash
