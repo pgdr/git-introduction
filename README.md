@@ -930,6 +930,36 @@ d = diff
 s = status
 ```
 
+## Installing Git
+
+For Linux and macs, please use the distro's package manager, e.g.
+
+```
+apt install git
+```
+
+```
+pacman -i git  # btw arch
+```
+
+```
+brew install git
+```
+
+For Windows, we recommend using [Git for Windows: Git BASH](https://gitforwindows.org/).
+
+### The latest stable Git
+
+If you use Ubuntu, it is possible to get the latest Git version by adding Git's _ppa_:
+
+```
+[~]$ add-apt-repository ppa:git-core/ppa
+[~]$ apt update
+[~]$ apt upgrade
+```
+
+
+
 # Git commands
 
 * Setup and Config
