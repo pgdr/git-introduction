@@ -378,7 +378,27 @@ all a revision control system.
 
 1. Run `git log`
 1. Run `git log -p`  (use `q` to quit if necessary)
+1. Run `git log --oneline`
 1. Run `git log --oneline --graph`
+1. Run `git config --global alias.lg log --graph --oneline`
+
+The latter command allows you to write `git lg` and get `git --oneline --graph`.  More complex formatting is possible.  You can modify your `~/.gitconfig` with aliases:
+
+```ini
+[user]
+	name = Your Name
+	email = Your.Email@example.com
+[core]
+	pager = less -X -F -R
+[alias]
+	ci = commit
+	st = status
+	plog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%ae>%Creset' --abbrev-commit
+	ld = log --pretty=format:\"%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]\" --decorate --date=relative --graph
+	lg = log --oneline --graph
+[icdiff]
+	options = --cols=80
+```
 
 
 ## References
@@ -1067,4 +1087,4 @@ If you use Ubuntu, it is possible to get the latest Git version by adding Git's 
 
 ---
 
-Copyright 2020---2024 Pål Grønås Drange, (cc-by-4.0)
+Copyright 2020---2025 Pål Grønås Drange, (cc-by-4.0)
