@@ -378,7 +378,7 @@ all a revision control system.
 
 1. Run `git log`
 1. Run `git log -p`  (use `q` to quit if necessary)
-1. Run `git log --oneline`
+1. Run `git log --oneline --graph`
 
 
 ## References
