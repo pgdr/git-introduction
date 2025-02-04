@@ -117,53 +117,59 @@ _(Note that if you are on Windows, you may use `notepad a.txt` instead.)_
 Let us create some content in our file `a.txt`:
 
 ```
-Mr. Utterson the lawyer was
-a man of a rugged countenance
-that was never lighted by a smile;
-cold, scanty and embarrassed in discourse;
-backward in sentiment;
-lean, long, dusty, dreary
-and yet somehow lovable.
+pizza
+hamburger
+beer
 ```
 
 Now, let us create a file `b.txt` which contains some errors on line five:
 
 ```
-Mr. Utterson the lawyer was
-a man of a rugged countenance
-that was never lighted by a smile;
-cold, scanty and embarrassed in discourse;
-bckwrd n sntmnt;
-lean, long, dusty, dreary
-and yet somehow lovable.
+pizza
+hamberger
+beer
 ```
 
 If we run `diff a.txt b.txt` in the terminal, we will get the following output
 (this is important)
 
 ```patch
-5c5
-< backward in sentiment;
+2c2
+< hamburger
 ---
-> bckwrd n sntmnt;
+> hamberger
 ```
 
 There are four lines in this output, and each line is important.
-1. `5c5` consists of two line numbers `5` and `5`, separated by a `c` (for _change_)
+1. `2c2` consists of two line numbers `2` and `2`, separated by a `c` (for _change_)
 1. The `<` character means content in the _first_ file (`a.txt`)
 1. The `---` separator means that we are done with the _first file_ of this _hunk_
 1. The `>` character means content in the _second_ file (`b.txt`)
 
 If we go back to file `b.txt` and _delete_ the fifth line (the one reading
-`bckwrd n sntmnt;`), then `diff a.txt b.txt` will say
+`hamberger;`), then `diff a.txt b.txt` will say
 
 ```patch
-5d4
-< backward in sentiment;
+2d1
+< hamburger
 ```
 
-You might have guessed it: the `d` in `5d4` means that a line was _deleted_.
-Were we to _add_ a line to the second file, the output would likely be `5a6`.
+You might have guessed it: the `d` in `2d1` means that a line was _deleted_.
+Were we to _add_ a line to the second file, the output would likely be `2a3`.
+
+`b.txt`:
+
+```
+pizza
+hamburger
+taco
+beer
+```
+
+```patch
+2a3
+> taco
+```
 
 Notice how a diff (a _patch_) between two files can tell us how to go from _one
 file_ (`a.txt`) to another file (`b.txt`), and back again.  And indeed, there is
@@ -200,13 +206,13 @@ meaning now, i.e. what is the difference between `a.txt` and `b.txt`.
 
 ```patch
 2c2
-< a man of a rugged countenance
+< hamburger
 ---
-> a man of rugged countenance
-6c6
-< lean, long, dusty, dreary
+> hamberger
+7c7
+< wine
 ---
-> lean, long dusty, dreary
+> whine
 ```
 
 **Lines are first-class citizens**
@@ -648,7 +654,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 We are now in a _conflict_ state, which we can easily get out of by running `git
 add a.txt` and `git commit`.  But first, let's inspect `a.txt`.
 
-```
+```patch
 git diff
   The text above the change ...
 ++<<<<<<< HEAD
@@ -1059,5 +1065,6 @@ If you use Ubuntu, it is possible to get the latest Git version by adding Git's 
 
 ---
 
+---
 
-Copyright 2020---2022 Pål Grønås Drange, (cc-by-4.0)
+Copyright 2020---2024 Pål Grønås Drange, (cc-by-4.0)
